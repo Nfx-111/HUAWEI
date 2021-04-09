@@ -32,8 +32,15 @@ gulp.task("js", done => {
 });
 
 gulp.task("img", done => {
-    gulp.src("img/*")
+    gulp.src("img/**")
         .pipe(gulp.dest("dist/img"))
+        .pipe(connect.reload());;
+    done();
+})
+
+gulp.task("font", done => {
+    gulp.src("font/**")
+        .pipe(gulp.dest("dist/font"))
         .pipe(connect.reload());;
     done();
 })
@@ -59,7 +66,7 @@ gulp.task("server", done => {
 
 
 // 同步模块  parallel 并行执行
-gulp.task("build", gulp.parallel("html", "sass", "js","img"));
+gulp.task("build", gulp.parallel("html", "sass", "js","img","font"));
 // 同步服务器   series：按顺序执行任务
 gulp.task("default", gulp.series("build", "server", "watch"))
 
