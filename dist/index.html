@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <!-- 轮播 -->
+    <link rel="stylesheet" href="https://www.swiper.com.cn/package/swiper-bundle.min.css">
+    <script src="js/index.js"></script>
     <style>
         * {
             margin: 0;
@@ -16,7 +20,7 @@
 </head>
 
 <body>
-    <!-- 导航栏 -->
+    <!-- 捷径栏 -->
     <header id="headwarp">
         <div id="head">
             <nav id="left">
@@ -26,7 +30,7 @@
                 <li>V码(优购码)</li>
                 <li>企业购</li>
                 <li>Select Region</li>
-                <li>更多精彩</li>
+                <li>更多精彩 <i class="iconfont icon-icon"></i></li>
             </nav>
             <nav id="right">
                 <li>
@@ -34,14 +38,67 @@
                     <a href="#">注册</a>
                 </li>
                 <li>我的订单</li>
-                <li>客户服务</li>
-                <li>网站导航</li>
-                <li>手机版</li>
-                <li>购物车</li>
+                <li>客户服务 <i class="iconfont icon-icon"></i></li>
+                <li>网站导航 <i class="iconfont icon-icon"></i></li>
+                <li>手机版 <i class="iconfont icon-icon"></i></li>
+                <li> <i class="iconfont icon-gouwuche"></i> 购物车</li>
             </nav> 
         </div>
     </header>
+    <!-- logo头部 -->
+    <div id="logo">
+        <img src="img/logo.png" alt="">
+      <ul>
+            <li><img src="img/华为专区.png" alt=""></li>
+            <li>莫代尔专区</li>
+            <li>华为智能屏</li>
+            <li>智能家居</li>
+            <li>教育优惠</li>
+    </ul>
+    
+    <input type="text" >
+    <div> 
+        <a href="#">智慧屏新品</a>
+        <a href="#">Mate x2</a>
+    </div>
 
+    <i class="iconfont icon-sousuo"> </i>
+
+    </div>
+
+
+
+
+      <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <img class="swiper-slide" src="img/轮播1.png">
+        <img class="swiper-slide" src="img/轮播2.png">
+      </div>
+    <!-- Add Arrows  -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- Add Pagination -->
+     <div class="swiper-pagination"></div>
+  </div>
+
+
+
+  <script src="https://www.swiper.com.cn/package/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      cssMode: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination'
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
 </body>
 
 </html>

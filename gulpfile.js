@@ -22,10 +22,10 @@ gulp.task("sass", done => {
 
 gulp.task("js", done => {
     gulp.src("js/*.js")
-        .pipe(uglify())
+     /*    .pipe(uglify())
         .pipe(rename({
             suffix: ".min"  //suffix 后缀名
-        }))
+        })) */
         .pipe(gulp.dest("dist/js"))
         .pipe(connect.reload());
     done();
@@ -51,7 +51,8 @@ gulp.task("watch", done => {
     gulp.watch("*.html", gulp.series("html"));
     gulp.watch("sass/*.scss", gulp.series("sass"));
     gulp.watch("js/*.js", gulp.series("js"));
-    gulp.watch("img/*", gulp.series("img"))
+    gulp.watch("img/**", gulp.series("img"));
+    gulp.watch("font/**", gulp.series("font"));
 });
 
 // 服务器
