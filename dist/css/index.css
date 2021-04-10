@@ -55,21 +55,37 @@ header {
   height: 74px;
   margin: 0 auto;
   position: relative; }
-  #logo img {
+  #logo > img {
     float: left;
     width: 200px;
     margin-top: 20px; }
   #logo ul {
     float: left;
-    margin-left: 30px; }
+    margin-left: 30px;
+    height: 74px;
+    display: flex;
+    align-items: center; }
     #logo ul li {
       display: inline-block;
-      margin: 0 10px; }
+      margin: 0 10px;
+      position: relative; }
+      #logo ul li:first-child div {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80px;
+        height: 26px;
+        background: #fff;
+        opacity: .3; }
       #logo ul li img {
         display: block;
         width: 80px; }
       #logo ul li:hover {
-        color: #a5072a; }
+        color: #a5072a;
+        cursor: pointer; }
+        #logo ul li:hover div {
+          display: block; }
   #logo input {
     margin: 20px 10px;
     float: right;
@@ -124,17 +140,21 @@ header {
 
 .login-lan {
   width: 1200px;
+  height: 88px;
   margin: 0 auto;
-  background: chocolate;
+  background-color: #fff;
   position: relative;
   top: -30px;
   z-index: 2;
   border-radius: 10px;
-  padding: 15px 0; }
+  display: flex;
+  align-items: center; }
   .login-lan .login {
     width: 270px;
     border-right: 1px solid #ccc;
-    font-size: 12px; }
+    font-size: 14px;
+    display: flex;
+    align-items: center; }
     .login-lan .login .head-x {
       width: 50px;
       height: 50px;
@@ -142,12 +162,257 @@ header {
       background-image: url("../img/登录头像.png");
       background-position: center;
       background-size: 50px;
-      display: inline-block; }
+      margin-left: 25px; }
     .login-lan .login .head-z {
-      display: inline-block;
-      color: #949494; }
+      height: 50px;
+      margin-left: 20px;
+      color: #949494;
+      line-height: 25px; }
       .login-lan .login .head-z a {
         color: #26221f; }
+      .login-lan .login .head-z p span {
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        border-radius: 5px; }
+        .login-lan .login .head-z p span:first-child {
+          width: 66px;
+          height: 20px;
+          border: 1px solid #ce758b;
+          color: #ce758b; }
+          .login-lan .login .head-z p span:first-child:hover {
+            background-color: #ce758b;
+            color: #fff;
+            cursor: pointer; }
+        .login-lan .login .head-z p span:last-child {
+          width: 66px;
+          height: 20px;
+          background-color: #5b565a;
+          color: #ededa7; }
+          .login-lan .login .head-z p span:last-child:hover {
+            background-color: #333;
+            cursor: pointer; }
+  .login-lan .login-list {
+    width: 660px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px; }
+    .login-lan .login-list dl {
+      margin: 0 30px; }
+      .login-lan .login-list dl dt {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: crimson;
+        background-image: url(../img/登录导航.png);
+        background-size: auto 50px; }
+      .login-lan .login-list dl:nth-child(1) dt {
+        background-position: -5px; }
+      .login-lan .login-list dl:nth-child(2) dt {
+        background-position: -55px; }
+      .login-lan .login-list dl:nth-child(3) dt {
+        background-position: -105px; }
+      .login-lan .login-list dl:nth-child(4) dt {
+        background-position: -160px; }
+      .login-lan .login-list dl:nth-child(5) dt {
+        background-position: -205px; }
+      .login-lan .login-list dl:nth-child(6) dt {
+        background-position: -255px; }
+      .login-lan .login-list dl dd {
+        font-size: 12px;
+        color: #aa8783;
+        line-height: 20px; }
+        .login-lan .login-list dl dd:hover {
+          color: #a5072a;
+          cursor: pointer; }
+  .login-lan .longin-gongg {
+    min-height: 50px;
+    width: 220px;
+    border-left: 1px solid #ccc; }
+    .login-lan .longin-gongg .gongg {
+      width: 220px;
+      min-height: 42px;
+      border-bottom: 1px solid #ccc; }
+      .login-lan .longin-gongg .gongg span {
+        color: #6e6e70;
+        font-weight: 600;
+        margin-left: 10px; }
+    .login-lan .longin-gongg ul {
+      width: 220px;
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-left: 10px; }
+      .login-lan .longin-gongg ul li {
+        height: 16px;
+        font-size: 12px;
+        color: #67675d;
+        display: flex;
+        align-items: center; }
+        .login-lan .longin-gongg ul li:hover {
+          color: #a5072a;
+          cursor: pointer; }
+        .login-lan .longin-gongg ul li:nth-child(1) i {
+          background-position: 0 0; }
+        .login-lan .longin-gongg ul li:nth-child(2) i {
+          background-position: -20px 0; }
+        .login-lan .longin-gongg ul li:nth-child(3) i {
+          background-position: -40px 0; }
+        .login-lan .longin-gongg ul li i {
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          background: url(../img/登录导航-1.png) no-repeat;
+          background-size: cover;
+          margin-right: 5px; }
+
+.ad {
+  width: 1212px;
+  min-height: 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
+  .ad div {
+    width: 290px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.6s; }
+    .ad div:hover {
+      box-shadow: 1px 2px 10px #ccc; }
+    .ad div img {
+      width: 100%; }
+
+h1 {
+  font-size: 28px;
+  line-height: 90px;
+  width: 1212px;
+  height: 80px;
+  margin: 0 auto;
+  font-weight: normal; }
+
+.hot {
+  width: 1212px;
+  min-height: 200px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .hot .hot-left {
+    width: 230px;
+    height: 607px;
+    border-radius: 5px;
+    overflow: hidden;
+    float: left;
+    margin-right: 15px;
+    transition: all 0.6s; }
+    .hot .hot-left:hover {
+      box-shadow: 1px 2px 10px #ccc; }
+    .hot .hot-left img {
+      width: 100%;
+      height: 100%; }
+  .hot .hot-right {
+    min-height: 500px;
+    float: left; }
+    .hot .hot-right dl {
+      width: 230px;
+      height: 300px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      float: left;
+      margin-right: 15px;
+      position: relative;
+      margin-bottom: 10px;
+      transition: all 0.6s;
+      box-shadow: 1px 2px 10px #ccc; }
+      .hot .hot-right dl:hover {
+        box-shadow: 1px 2px 10px #ccc; }
+      .hot .hot-right dl:last-child {
+        margin-right: 0; }
+      .hot .hot-right dl dt {
+        width: 150px;
+        height: 150px;
+        margin: 30px auto; }
+        .hot .hot-right dl dt img {
+          width: 100%; }
+      .hot .hot-right dl dd {
+        text-align: center;
+        line-height: 25px; }
+        .hot .hot-right dl dd h6 {
+          font-size: 14px;
+          font-weight: normal; }
+        .hot .hot-right dl dd p {
+          font-size: 12px;
+          color: #818586; }
+        .hot .hot-right dl dd span {
+          font-size: 10px;
+          color: #a20434; }
+      .hot .hot-right dl .new-p {
+        width: 65px;
+        height: 20px;
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        line-height: 20px;
+        background-color: #f56d71;
+        border-radius: 0 0 5px 5px;
+        position: absolute;
+        top: 0;
+        left: 40%; }
+
+.compe {
+  width: 1212px;
+  min-height: 100px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around; }
+  .compe .compe-gg {
+    width: 230px;
+    height: 300px;
+    position: relative; }
+    .compe .compe-gg dl {
+      width: 230px;
+      height: 240px;
+      background-color: #fff;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 1px 1px 5px #f3f3f3; }
+      .compe .compe-gg dl dt {
+        width: 150px;
+        height: 150px;
+        margin: 30px auto; }
+        .compe .compe-gg dl dt img {
+          width: 100%; }
+      .compe .compe-gg dl dd {
+        width: 230px;
+        height: 35px;
+        background-color: #f3f3f3;
+        text-align: center;
+        line-height: 35px;
+        font-size: 14px;
+        color: #696a6c; }
+    .compe .compe-gg p {
+      text-align: center;
+      font-size: 14px;
+      color: #383842;
+      line-height: 30px; }
+    .compe .compe-gg span {
+      display: block;
+      font-size: 12px;
+      color: #a90e20;
+      line-height: 24px;
+      text-align: center; }
+    .compe .compe-gg .compe-np {
+      width: 65px;
+      height: 20px;
+      font-size: 12px;
+      color: #fff;
+      text-align: center;
+      line-height: 20px;
+      background-color: #f56d71;
+      border-radius: 0 0 5px 5px;
+      position: absolute;
+      top: 0;
+      left: 40%; }
 
 /**
  * Swiper 6.4.15
