@@ -1,5 +1,13 @@
 $bg-wid:1212px;
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 header {
     height: 37px;
     background-color: #2e2828;
@@ -54,7 +62,7 @@ header {
 
                 a {
                     color: #b3b3ab;
-                    text-decoration: none;
+
 
                     &:hover {
                         color: #fff;
@@ -138,15 +146,75 @@ header {
 
 }
 
-
-
-.swiper-container {
+.nav {
+    width: 200px;
+    height: 440px;
+    background-color: #fff;
     margin: 0 auto;
-    width: 1920px;
+    border-radius: 10px;
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    z-index: 100;
+    overflow: hidden;
 
-    img {
-        display: block;
+    ul {
+        width: 200px;
+
+        li {
+            background-color: #fff;
+            padding: 10px 10px;
+            font-size: 14px;
+            color: #8d8a91;
+
+            &:hover {
+                background-color: #f3f3f3;
+            }
+
+            span {
+                display: inline-block;
+                margin-right: 10px;
+                float: right;
+
+
+            }
+        }
     }
+}
 
+.login-lan {
+    width: 1200px;
+    margin: 0 auto;
+    background: chocolate;
+    position: relative;
+    top: -30px;
+    z-index: 2;
+    border-radius: 10px;
+    padding: 15px 0;
 
+    .login {
+        width: 270px;
+        border-right: 1px solid #ccc;
+        font-size: 12px;
+
+        .head-x {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-image: url("../img/登录头像.png");
+            background-position: center;
+            background-size: 50px;
+            display: inline-block;
+
+        }
+
+        .head-z {
+            display: inline-block;
+            color: #949494;
+
+            a {
+                color: #26221f;
+            }
+        }
+    }
 }

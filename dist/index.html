@@ -8,8 +8,6 @@
     <title>首页</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="font/iconfont.css">
-    <!-- 轮播 -->
-    <link rel="stylesheet" href="https://www.swiper.com.cn/package/swiper-bundle.min.css">
     <script src="js/index.js"></script>
     <style>
         * {
@@ -54,39 +52,104 @@
             <li>华为智能屏</li>
             <li>智能家居</li>
             <li>教育优惠</li>
-    </ul>
-    
+    </ul>  
     <input type="text" >
     <div> 
         <a href="#">智慧屏新品</a>
         <a href="#">Mate x2</a>
     </div>
-
     <i class="iconfont icon-sousuo"> </i>
+    </div>
+
+      <!-- 轮播&导航 -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url(img/轮播1.png);"> </div>
+      <div class="swiper-slide" style="background-image: url(img/轮播2.png);"> </div>
+      <div class="swiper-slide" style="background-image: url(img/轮播3.png);"> </div>
+      <div class="swiper-slide" style="background-image: url(img/轮播4.png);"> </div>
+      <div class="swiper-slide" style="background-image: url(img/轮播5.png);"> </div>
+      <div class="swiper-slide" style="background-image: url(img/轮播6.png);"> </div>
+      </div>
+    <!-- Add Arrows  -->
+    
+    <div class="nextwarp">
+    <div class="swiper-button-next"></div>
+  </div>
+  <div class="prevwarp">
+    <div class="swiper-button-prev"></div>
+    </div>
+    <!-- Add Pagination -->
+     <div class="swiper-pagination"></div>
+
+  <!-- 导航 -->
+     <div class="nav">
+      <ul>
+        <li>手机 <span>&gt;</span> 
+        </li>
+        <li>智能穿戴VR <span>&gt;</span>
+        <ul>
+
+        </ul>
+      </li>
+        <li>耳机音响眼镜 <span>&gt;</span></li>
+        <li>智慧屏 <span>&gt;</span></li>
+        <li>电脑 <span>&gt;</span></li>
+        <li>平板 <span>&gt;</span></li>
+        <li>只能路由 <span>&gt;</span></li>
+        <li>配件 <span>&gt;</span></li>
+        <li>生态产品 <span>&gt;</span></li>
+        <li>美食酒饮 <span>&gt;</span></li>
+        <li>增值服务企业商用 <span>&gt;</span></li>
+      </ul>
+  
+    </div>
+  
+  
+  
+    
+    </div>
+
+    <!-- 登录栏 -->
+    <div class="login-lan">
+      <div class="login">
+        <p class="head-x"> </p>
+        <p class="head-z">你好！请 
+          <a href="#">登录</a> 
+          <a href="#">注册</a>
+        </p>
+        <p class="head-fl" >
+          <span>新人福利</span>
+          <span>会员频道</span>
+        </p>
+      </div>
 
     </div>
 
 
 
 
-      <!-- Swiper -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-        <img class="swiper-slide" src="img/轮播1.png">
-        <img class="swiper-slide" src="img/轮播2.png">
-      </div>
-    <!-- Add Arrows  -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <!-- Add Pagination -->
-     <div class="swiper-pagination"></div>
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
   <script src="https://www.swiper.com.cn/package/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
+      loop : true,
+      autoplay:true,
       cssMode: true,
       navigation: {
         nextEl: '.swiper-button-next',
