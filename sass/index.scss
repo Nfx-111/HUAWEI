@@ -902,7 +902,7 @@ h1 {
 
 footer {
     height: 425px;
-    background-color: #f5f4f4;
+    background-color: #f9f9f9;
 
     .foot {
         width: $bg-wid;
@@ -1037,6 +1037,52 @@ footer {
             }
 
         }
+    }
 
+    .foot-b {
+        width: $bg-wid;
+        border-top: 1px solid #ccc;
+        margin-top: 20px;
+        display: flex;
+        padding-top: 20px;
+
+        p {
+            margin-right: 20px;
+
+            img {
+                width: 82px;
+            }
+        }
+
+        em {
+            font-style: normal;
+        }
+
+        ul {
+            width: 720px;
+            display: flex;
+            margin-bottom: 6px;
+
+            li {
+                border-right: 1px solid #d3d3d3;
+                padding-right: 6px;
+                margin-right: 6px;
+                color: #777;
+                font-size: 12px;
+            }
+        }
+
+        a,
+        span,
+        em {
+            font-size: 12px;
+            color: #a4a4a4;
+            line-height: 20px;
+        }
+
+        a:hover {
+            color: #a90e20;
+            cursor: pointer;
+        }
     }
 }

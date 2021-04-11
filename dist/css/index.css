@@ -1136,7 +1136,7 @@ h1 {
 
 footer {
   height: 425px;
-  background-color: #f5f4f4; }
+  background-color: #f9f9f9; }
   footer .foot {
     width: 1212px;
     height: 425px;
@@ -1219,3 +1219,34 @@ footer {
           color: #333; }
         footer .foot .foot-z .foot-z-r .guanzhu i {
           font-size: 24px; }
+  footer .foot-b {
+    width: 1212px;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    display: flex;
+    padding-top: 20px; }
+    footer .foot-b p {
+      margin-right: 20px; }
+      footer .foot-b p img {
+        width: 82px; }
+    footer .foot-b em {
+      font-style: normal; }
+    footer .foot-b ul {
+      width: 720px;
+      display: flex;
+      margin-bottom: 6px; }
+      footer .foot-b ul li {
+        border-right: 1px solid #d3d3d3;
+        padding-right: 6px;
+        margin-right: 6px;
+        color: #777;
+        font-size: 12px; }
+    footer .foot-b a,
+    footer .foot-b span,
+    footer .foot-b em {
+      font-size: 12px;
+      color: #a4a4a4;
+      line-height: 20px; }
+    footer .foot-b a:hover {
+      color: #a90e20;
+      cursor: pointer; }
