@@ -28,9 +28,193 @@ header {
 
 .content {
   width: 1263px;
-  height: 560px;
+  height: 730px;
+  padding: 5px 0;
   margin: 0 auto;
-  overflow: hidden; }
+  text-align: center;
+  position: relative; }
+  .content .content-l {
+    position: absolute;
+    top: 10px;
+    left: 40px; }
+    .content .content-l div {
+      width: 217px;
+      height: 40px;
+      background-color: #f0efef;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      text-align: center;
+      line-height: 40px;
+      font-size: 11.2px;
+      color: #191919; }
+      .content .content-l div:last-child {
+        background: none; }
+  .content .content-input {
+    width: 768px;
+    height: 633px;
+    margin: 0 auto; }
+    .content .content-input h1 {
+      font-size: 25.6px;
+      color: #191919;
+      font-weight: normal;
+      margin-top: 60px; }
+    .content .content-input .longin {
+      font-size: 14.4px;
+      color: #191919;
+      margin-bottom: 40px; }
+      .content .content-input .longin a {
+        color: cornflowerblue;
+        text-decoration: none;
+        line-height: 30px; }
+    .content .content-input .count,
+    .content .content-input .phone-number,
+    .content .content-input .data {
+      width: 354px;
+      height: 40px;
+      background: #f0efef;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.2px;
+      border-radius: 5px;
+      margin: 20px auto;
+      padding: 2px 5px;
+      position: relative; }
+      .content .content-input .count select,
+      .content .content-input .phone-number select,
+      .content .content-input .data select {
+        font-size: 11.2px;
+        border: none;
+        outline: none;
+        background: none;
+        position: relative; }
+        .content .content-input .count select:hover,
+        .content .content-input .phone-number select:hover,
+        .content .content-input .data select:hover {
+          cursor: pointer; }
+  .content .phone-number {
+    position: relative; }
+    .content .phone-number #phone-number {
+      display: block;
+      width: 267px;
+      height: 38px;
+      border: none;
+      outline: none;
+      padding: 2px 5px;
+      margin: 20px auto;
+      width: 354px;
+      height: 40px;
+      background: #f0efef;
+      border-radius: 5px; }
+    .content .phone-number input {
+      display: block;
+      border: none;
+      outline: none;
+      padding: 2px 5px;
+      margin: 20px auto;
+      width: 354px;
+      height: 40px;
+      background: #f0efef;
+      border-radius: 5px; }
+    .content .phone-number p {
+      position: absolute;
+      left: 0;
+      top: 50px;
+      font-size: 12px;
+      color: red;
+      line-height: 1;
+      display: none; }
+  .content .passwrod-input {
+    position: relative; }
+    .content .passwrod-input input {
+      display: block;
+      border: none;
+      outline: none;
+      padding: 2px 5px;
+      margin: 20px auto;
+      width: 354px;
+      height: 40px;
+      background: #f0efef;
+      border-radius: 5px; }
+    .content .passwrod-input #btn {
+      width: 70px;
+      font-size: 12px;
+      position: absolute;
+      right: 200px;
+      top: -20px;
+      color: cornflowerblue;
+      opacity: .6; }
+      .content .passwrod-input #btn:hover {
+        cursor: pointer; }
+    .content .passwrod-input #password-yq {
+      width: 180px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 1px 1px 3px #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      top: -55px;
+      left: 290px;
+      display: none; }
+      .content .passwrod-input #password-yq p {
+        font-size: 14px;
+        line-height: 26px;
+        float: left; }
+        .content .passwrod-input #password-yq p:last-child {
+          font-size: 12px;
+          color: #777; }
+      .content .passwrod-input #password-yq span {
+        display: block;
+        line-height: 1;
+        float: left;
+        line-height: 20px;
+        font-size: 12.8px;
+        color: #adadad; }
+    .content .passwrod-input i {
+      font-size: 12px;
+      color: red;
+      line-height: 1;
+      position: absolute;
+      left: 205px;
+      top: 114px;
+      font-style: normal;
+      display: none; }
+  .content .data p {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #777;
+    border-radius: 50%;
+    font-size: 10px;
+    text-align: center;
+    line-height: 15px;
+    color: #777;
+    position: absolute;
+    top: 15px;
+    right: -30px; }
+    .content .data p span {
+      font-size: 11.2px;
+      color: #191919;
+      display: block;
+      width: 155px;
+      padding: 2px;
+      line-height: 20px;
+      background-color: #fff;
+      box-shadow: 1px 1px 6px #ccc;
+      display: none; }
+  .content #submit {
+    border: none;
+    border-radius: 8px;
+    margin-top: 40px;
+    width: 248px;
+    height: 40px;
+    background: blue;
+    color: #fff;
+    font-size: 12.8px;
+    opacity: .3; }
 
 footer {
   height: 88px;
