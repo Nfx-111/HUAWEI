@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    
+
+
+    <script>
+
+        // 注册
+/*        $.get("http://jx.xuzhixiang.top/ap/api/reg.php", {
+             username: "zz1111",
+             password: 111111
+         }, res => {
+             console.log(res);
+         })  */
+        // 登录
+          $.get("http://jx.xuzhixiang.top/ap/api/login.php", {
+             username: "zz1111",
+             password: 111111
+         }, res => {
+             console.log(res);
+         })   
+
+
+      $.get("http://jx.xuzhixiang.top/ap/api/productlist.php", {
+            uid: 0011122
+        }).then(res => {
+            console.log(res);
+        }) 
+ 
+        // 插入商品
+
+
+/*    $.get("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php", {
+            pimg: "https://res0.vmallres.com/pimages//product/6941487210626/428_428_ACE1CD80845649CE0FB2B5131E3110DCB4BC7CDED5B102BDmp.png",
+            pname: "nova 8",
+            pprice: 3299,
+            pdesc: "限时开售",
+            uid: 0011122
+        }, res => {
+            console.log(res);
+        })  
+
+ */
+
+/*  $.get("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php", {
+            pimg: "https://res0.vmallres.com/pimages//product/6901443415830/428_428_3FEB0BF538D41FDC1B5E8EC86F1732B42C21B76E453EF914mp.png",
+            pname: "HUAWEI Mate 30E Pro 5G",
+            pprice: 5299,
+            pdesc: "超感光徕卡电影影像  ",
+            uid: 0011122
+        }, res => {
+            console.log(res);
+        })   
+        
+        */
+/* 
+        $.get("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php", {
+            pimg: "https://res0.vmallres.com/pimages//product/6901443398027/428_428_C5B3EEB31BA081CF605FE04A1118DEF332F4C3003CC60ECEmp.png",
+            pname: "HUAWEI P40 Pro+ 5G",
+            pprice: 7988 ,
+            pdesc: "徕卡五摄 ",
+            uid: 0011122
+        }, res => {
+            console.log(res);
+        }) 
+ */
+
+/*  $.get("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php", {
+            pimg: "https://res0.vmallres.com/pimages//product/6941487211241/428_428_6A6B29F293F67E0F90A2B7A4B9D7965D306BFAA581CD1CC1mp.png",
+            pname: "nova 8 Pro",
+            pprice: 3999 ,
+            pdesc: "限时开售 ",
+            uid: 0011122
+        }, res => {
+            console.log(res);
+        })   */
+
+/*         $.get("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php", {
+            pimg: "https://res0.vmallres.com/pimages//product/6941487207756/428_428_A6A30621B8088CBBAF2D831A44CA9E945FEB6E9B64A1E201mp.png",
+            pname: "FreeBuds 4i",
+            pprice: 499 ,
+            pdesc: "享三期免息 ",
+            uid: 0011122
+        }, res => {
+            console.log(res);
+        }) */
+
+/*         $.get("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php", {
+            pimg: "https://res0.vmallres.com/pimages//product/6941487220274/428_428_2C8F152DCD7C4EC91348F14D5D7B8FC89EF1CA4BA298A57Fmp.png",
+            pname: "HUAWEI Mate 40E 5G",
+            pprice: 4599 ,
+            pdesc: "Mate 40系列新品上市   ",
+            uid: 0011122
+        }, res => {
+            console.log(res);
+        }) */
+
+/*       $.get(" http://jx.xuzhixiang.top/ap/api/goods/goods-update.php", {
+            pid:416075,
+            pimg: "https://res0.vmallres.com/pimages//product/6901443415830/428_428_3FEB0BF538D41FDC1B5E8EC86F1732B42C21B76E453EF914mp.png",
+            pname: "HUAWEI Mate 30E Pro 5G",
+            pprice: 5299,
+            pdesc: "超感光徕卡电影影像  ",
+            uid: 0011122
+        }, res => {
+            console.log(res);
+        })  */
+
+
+    </script>
+</body>
+</html>

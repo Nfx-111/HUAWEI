@@ -69,7 +69,18 @@ header {
         flex-direction: column;
         justify-content: center;
         width: 300px;
-        padding: 10px; }
+        padding: 10px;
+        position: relative;
+        /*     #err {
+                    display: block;
+                } */ }
+        .content .content-longin .content-r .content-r-input p {
+          font-size: 12px;
+          color: red;
+          position: absolute;
+          top: -6px;
+          left: 10px;
+          display: none; }
         .content .content-longin .content-r .content-r-input input {
           border: none;
           outline: none;

@@ -133,30 +133,28 @@
     i.onmouseout=function(){
         span.style.display="none"
     }
-
-/*     var input = document.querySelectorAll("input");
-
-    for(var i =0;i<input.length;i++){
-
-    input[i].onclick=function(){
-        input[i].style.border="1px solid #ccc";        
-        }
-    }  */
 </script>
 
  <script>
 
 // 获取验证码
-var number = Math.random()*(9+0);
+    btn.onclick = function () {
+             var arr = [];
+         for (var i = 0; i < 6; i++) {
+            var code = parseInt(Math.random() * 123);
+        if (code >= 48 && code <= 57){
+            arr.push(String.fromCharCode(code));
+            } else {
+              i--;//如果第一次循环没有得到想要的值，依序循环第一次。
+             }
+             yanzm.value=arr.join("");
+            }
+        }
 
-
-$("#btn").click(function(){
-$("#yanzm").val(number)
-})
 
     // 手机号
-    $("#phone-number").change(function() {
-            var reg = /^1(3|4|5|6|7|8|9)\d{9}$/;
+    $("#phone-number").focusout(function() {
+            var reg = /^[1][3,4,5,7,8][0-9]{9}$/;
             if (reg.test($(this).val()) == false) {;
                 $(".phone-number p").css({
                     "display": "block"
@@ -198,12 +196,19 @@ $("#yanzm").val(number)
         })
 
 
+        if ($("#phone-number").val() && $("#password").val() && $("#password-a").val() != "") {
+        $("#submit").css({
+                    "opacity":"1"
+                })
+            }
+
+
+        
+
 
       $("#submit").click(function() {
             if ($("#phone-number").val() && $("#password").val() && $("#password-a").val() != "") {
-                $("#submit").css({
-                    "opacity":"1"
-                })
+     
                 $.get("http://jx.xuzhixiang.top/ap/api/reg.php", {
                     username: $("#phone-number").val(),
                     password: $("#password").val(),
@@ -211,7 +216,7 @@ $("#yanzm").val(number)
                     console.log(res.code);
                     if (res.code == 1) {
                         alert("注册成功")
-                        location.href = "login.html";
+                        location.href = "longin.html";
                     } else {
                         alert("注册失败")
                     }

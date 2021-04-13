@@ -58,4 +58,35 @@ function indexjs() {
       $(".vx-img").css("display","none")
     })
 
+
+    let list = document.querySelector(".hot-right")
+    var oUl = []
+    var str = ""
+    $.get("http://jx.xuzhixiang.top/ap/api/productlist.php", {
+        uid: 0011122
+    }).then(res => {
+        oUl = res.data
+        console.log(oUl)
+        for (let id in oUl) {
+            str += `
+      <dl data-id=${id}>
+      <a href="detail.html?id=${oUl[id].pid}">
+      <dt><img src="${oUl[id].pimg}"></dt>
+      <dd>
+      <h6>${oUl[id].pname}</h6>
+      <p>${oUl[id].pdesc}</p>
+       <span>${oUl[id].pprice}</span>
+       </dd>
+       </a>
+       </dl>
+       `;
+            console.log(id)
+        }
+        list.innerHTML = str;
+    })
+    console.log(list)
+    
+  
+  
+  
 }

@@ -95,6 +95,20 @@ header {
                 justify-content: center;
                 width: 300px;
                 padding: 10px;
+                position: relative;
+
+                p {
+                    font-size: 12px;
+                    color: red;
+                    position: absolute;
+                    top: -6px;
+                    left: 10px;
+                    display: none;
+                }
+
+                /*     #err {
+                    display: block;
+                } */
 
                 input {
                     border: none;

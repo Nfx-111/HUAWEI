@@ -7,6 +7,7 @@
     <title>登录</title>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="font/iconfont.css">
+    <script src="js/jquery.js"></script>
 
     <style>
         *{
@@ -38,10 +39,10 @@
 
         <div class="content-r">
             <div class="content-r-input">
-                <input type="text" placeholder="手机号/邮箱地址/账户名">
-                <input type="password" placeholder="密码">
+                <input type="text" placeholder="手机号/邮箱地址/账户名" id="username" autocomplete="on">
+                <input type="password" placeholder="密码" id="password" autocomplete="on">
                 <a href="#">短信验证码登录</a>
-                <input type="submit" value="登录">
+                <input type="submit" value="登录" id="login">
             </div>
             <div class="content-r-b">
                 <a href="#">注册</a>
@@ -72,6 +73,33 @@
             </div>
             <p>华为帐号  版权所有 © 2011-2021 </p>
         </div>
-    </footer>
+    </footer>   
+
+    <!--接口 -->
+    <script>
+        $(function() {
+            $("#login").click(function() {
+                if ($("#username").val() && $("#password").val() != "") {
+                    $.get("http://jx.xuzhixiang.top/ap/api/login.php", {
+                        username: $("#username").val(),
+                        password: $("#password").val(),
+                    }, res => {
+                        let str = "";
+                        console.log(res)
+                        str = res.data.username;
+                        console.log(str)
+                        if (res.code == 1) {
+                            alert("登录成功")
+                            location.href = "index.html?username=" + str + "";
+                        } else {
+                            alert("用户名或密码不正确")
+                        }
+                    })
+                } else {
+                    alert("用户名或密码不能为空")
+                }
+            })
+        }) 
+    </script>
 </body>
 </html>

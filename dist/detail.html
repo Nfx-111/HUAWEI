@@ -1,12 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>详情页</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>详情页</title>
+	<link rel="stylesheet" href="css/detail.css">
+	<link rel="stylesheet" href="font/iconfont.css">
+	<script src="js/jquery.js"></script>
+	<!-- <script src="js/detail.js"></script> -->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
 </head>
+
 <body>
-    
+	<!-- 捷径栏 -->
+	<header id="headwarp">
+		<div id="head">
+			<nav id="left">
+				<li>首页</li>
+				<li>华为官网</li>
+				<li>花粉俱乐部</li>
+				<li>V码(优购码)</li>
+				<li>企业购</li>
+				<li>Select Region</li>
+				<li id="more-jc">更多精彩 <i class="iconfont icon-icon"></i>
+					<ul class="li-ul" id="jc-ul">
+						<li>EMUI</li>
+						<li>应用市场</li>
+						<li>华为终端云空间</li>
+						<li>开发者联盟</li>
+					</ul>
+				</li>
+			</nav>
+			<nav id="right">
+				<li>
+					<a href="longin.html">请登录</a>
+					<a href="reji.html">注册</a>
+				</li>
+				<li>我的订单</li>
+				<li id="server">客户服务 <i class="iconfont icon-icon"></i>
+					<ul class="li-ul" id="server-ul">
+						<li>服务中心</li>
+						<li>联系客服</li>
+					</ul>
+				</li>
+
+				<li id="nav">网站导航 <i class="iconfont icon-icon"></i>
+					<div id="nav-ul">
+						<p>
+							<i></i>
+							<span>商城首页</span>
+						</p>
+						<ol>
+							<h2>频道</h2>
+							<li>华为专区</li>
+							<li>企业购</li>
+							<li>教育购</li>
+						</ol>
+
+						<ol>
+							<h2>产品</h2>
+
+							<li>手机</li>
+							<li>笔记本</li>
+							<li>平板</li>
+							<li>智能穿戴</li>
+							<li>智能家居</li>
+							<li>智慧屏</li>
+							<li>耳机音响</li>
+							<li>热销配件</li>
+							<li>生态产品</li>
+							<li>增值服务</li>
+						</ol>
+
+						<ol>
+							<h2>增值服务</h2>
+							<li>以旧换新</li>
+							<li>补购保障</li>
+							<li>一口价换电池</li>
+						</ol>
+
+						<ol>
+							<h2>会员</h2>
+							<li>会员频道</li>
+						</ol>
+					</div>
+
+				</li>
+
+
+				<li>手机版 <i class="iconfont icon-icon"></i></li>
+				<li> <i class="iconfont icon-gouwuche"></i> 购物车</li>
+			</nav>
+		</div>
+	</header>
+
+	<div class="logo-warp">
+		<div id="logo">
+			<img src="img/logo.png" alt="">
+			<ul>
+				<li>
+					<img src="img/华为专区.png" alt="">
+					<div></div>
+				</li>
+				<li>莫代尔专区</li>
+				<li>华为智能屏</li>
+				<li>智能家居</li>
+				<li>教育优惠</li>
+			</ul>
+			<input type="text" id="logo-input">
+			<div id="logo-a">
+				<a href="#">智慧屏新品</a>
+				<a href="#">Mate x2</a>
+			</div>
+			<i class="iconfont icon-sousuo"> </i>
+		</div>
+	</div>
+
+	<!-- 内容区 -->
+	<div class="content">
+		<!-- 放大镜 -->
+		<div class="z-img">
+			<div class="midimg">
+				<img src="#" alt="">
+				<div class="zoom"> </div>
+			</div>
+			<div class="bigimg">
+				<img src="#" alt="">
+			</div>
+			<!-- 小图 -->
+			<div class="samllimg">
+				<img src="#" alt="">
+			</div>
+		</div>
+		<!-- 内容 -->
+		<div class="z-detail">
+			<!-- 商品介绍 -->
+			<div class="present"></div>
+			<!-- 价格栏 -->
+			<div class="price"> </div>
+			<!-- 服务、ID -->
+			<div class="serve"> </div>
+			<!-- id -->
+			<div class="good-id"> </div>
+			<!-- 选项 -->
+			<div class="option"></div>
+
+			<!-- 添加购物车 -->
+			<div class="add-cart">
+
+				<div class="add-num">
+					<input type="text">
+					<span>+</span>
+					<span>-</span>
+				</div>
+
+				<div class="cart">
+					<input type="buttom" value="加入购物车" class="add-cart">
+					<input type="buttom" value="立即购买" class="buy">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 定位菜单 -->
+	<div class="fixed-cd">
+		<div><i class="iconfont icon-zaixiankefu"></i> <a href="#">在线客服</a></div>
+		<div><i class="iconfont icon-gouwuche"></i> <a href="#">购物车</a></div>
+		<div><i class="fuwu"></i> <a href="#">自助服务</a></div>
+		<div class="huidingbu"><i class="iconfont icon-huidingbu"></i> <a href="#">回到顶部</a></div>
+
+	</div>
+
+
+
+	<!-- 尾部 -->
+	<footer>
+		<div class="foot">
+			<ul class="foot-t">
+				<li> <i></i> 百强企业 品质保证</li>
+				<li> <i></i> 7天退货 15天换货</li>
+				<li> <i></i> 48元起免运费</li>
+				<li> <i></i> 2000家服务店 全国联保</li>
+			</ul>
+
+			<div class="foot-z">
+				<div class="foot-z-l">
+					<ul>
+						<h6>购物相关</h6>
+						<li>购物指南</li>
+						<li>配送方式</li>
+						<li>支付方式</li>
+						<li>常见问题</li>
+					</ul>
+
+					<ul>
+						<h6>保修与退换货</h6>
+						<li>保修政策</li>
+						<li>退换货政策</li>
+						<li>保修状态查询</li>
+						<li>配件防伪查询</li>
+					</ul>
+
+					<ul>
+						<h6> 维修与技术支持</h6>
+						<li>服务店</li>
+						<li>预约维修</li>
+						<li>手机寄修</li>
+						<li>备件价格查询</li>
+						<li>上门服务</li>
+					</ul>
+
+					<ul>
+						<h6>特色服务</h6>
+						<li>防伪查询</li>
+						<li>补购保证</li>
+						<li>以旧换新</li>
+						<li>礼品包装</li>
+					</ul>
+
+					<ul>
+						<h6>关于我们</h6>
+						<li>公司介绍</li>
+						<li>华为商城简介</li>
+						<li>华为零售店</li>
+						<li>商家中心</li>
+						<li>意见反馈</li>
+					</ul>
+
+					<ul>
+						<h6>友情链接</h6>
+						<li>华为集团</li>
+						<li>花粉俱乐部</li>
+						<li>华为云</li>
+						<li>华为应用市场</li>
+					</ul>
+				</div>
+
+				<div class="foot-z-r">
+					<h3>950805</h3>
+					<p>7x24小时客服热线(仅收市话费)</p>
+
+					<div class="kefu">
+						<i class="iconfont icon-zaixiankefu"></i>
+						<span>在线客服</span>
+					</div>
+
+					<div class="guanzhu">
+						<span>关注Vamll:</span>
+						<i class="iconfont icon-wechat-fill">
+							<img src="./img/微信划过.png" class="vx-img">
+						</i>
+						<i class="iconfont icon-toutiao"></i>
+						<i class="iconfont icon-weibo"></i>
+						<i class="iconfont icon-baidu"></i>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="foot-b">
+				<p><img src="img/foot-logo.png"></p>
+				<div class="foot-b-r">
+					<ul>
+						<li>华为集团</li>
+						<li>华为CBG官网</li>
+						<li>花粉俱乐部</li>
+						<li>华为应用市场</li>
+						<li>EMUI</li>
+						<li>华为终端云空间</li>
+						<li>开发者联盟</li>
+						<li>华为商城手机版</li>
+						<li>网站地图</li>
+
+					</ul>
+					<a href="#">隐私声明</a>
+					<a href="#">服务协议</a>
+					<a href="#">COOKIES</a>
+					<span> Copyright © 2012-</span>
+					<span>2012-2021 华为终端有限公司 版权所有</span>
+					<a href="#">粤ICP备19015064号</a>
+					<em> | </em>
+					<a href="#">粤公网安备 44190002003939号</a>
+					<br>
+					<span>增值电信业务经营许可证：粤B2-20190762</span>
+					<em> | </em>
+					<span>备案主体编号：44201919072182</span>
+					<em> | </em>
+					<span>粤新出网备（2021）2号</span>
+					<br>
+					<a href="#">互联网药品信息服务资格证（粤）-非经营性-2020-0102</a>
+					<span> | 粤东食药监械经营备20203930</span>
+
+				</div>
+
+			</div>
+		</div>
+	</footer>
+	<script src="js/detail.js"></script>
+	<script>
+		// 放大镜
+		console.log("aa")
+
+		function Warp() {
+			this.warp = document.querySelector(".z-img");
+			console.log(this.warp)
+
+			this.midimg = document.querySelector(".midimg");
+			this.mImg = this.midimg.children[0];
+
+			this.zoom = document.querySelector(".zoom");
+
+			this.bigimg = document.querySelector(".bigimg");
+			this.bImg = this.bigimg.children[0];
+
+			this.samllimg = document.querySelector(".samllimg");
+			this.sImg = this.samllimg.children;
+			// 鼠标移入显示
+			this.midimg.onmouseover = () => {
+				this.zoom.style.display = "block";
+				this.bigimg.style.display = "block";
+			}
+			// 鼠标移出消失
+			this.midimg.onmouseout = () => {
+				this.zoom.style.display = "none";
+				this.bigimg.style.display = "none";
+			}
+
+			this.midimg.onmousemove = (e) => {
+				let evt = e || event;
+
+				let wl = this.midimg.offsetWidth - this.zoom.offsetWidth;
+				let wh = this.midimg.offsetHeight - this.zoom.offsetHeight;
+
+				// 鼠标位置 在放大镜zoom框中间
+				let l = evt.pageX - this.warp.offsetLeft - this.zoom.offsetWidth / 2;
+				let t = evt.pageY - this.warp.offsetTop - this.zoom.offsetHeight / 2;
+
+				// 判断zoom框移动位置
+				l = l <= 0 ? 0 : l >= wl ? wl : l;
+				t = t <= 0 ? 0 : t >= wh ? wh : t;
+
+				// zoom框的top left跟着鼠标移动
+				this.zoom.style.top = t + "px";
+				this.zoom.style.left = l + "px";
+
+				// 取得中间图片宽与放大框移动比例 * 放大图片的宽
+				this.bImg.style.left = -this.zoom.offsetLeft / this.midimg.offsetWidth * this.bImg
+					.offsetWidth + "px";
+				this.bImg.style.top = -this.zoom.offsetTop / this.midimg.offsetHeight * this.bImg
+					.offsetHeight + "px";
+			}
+
+			for (let i = 0; i < this.sImg.length; i++) {
+				this.sImg[i].onclick = () => {
+					this.bImg.src = this.mImg.src = this.sImg[i].src;
+
+				}
+
+			}
+
+		}
+		new Warp();
+	</script>
+
+
+
+
 </body>
+
 </html>
