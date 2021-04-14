@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +11,13 @@
     <script src="js/jquery.js"></script>
 
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="head">
@@ -27,37 +29,37 @@
 
     <div class="content">
         <h1>华为账号登录</h1>
-        <div class="content-longin"> 
-        <div class="content-l">
-            <div><img src="./img/登录二维码.png"></div>
-            <p>若您使用华为手机，请进入“设置”>“华为帐号”扫码登录。</p>
-        </div>
-
-        <div class="content-z">
-
-        </div>
-
-        <div class="content-r">
-            <div class="content-r-input">
-                <input type="text" placeholder="手机号/邮箱地址/账户名" id="username" autocomplete="on">
-                <input type="password" placeholder="密码" id="password" autocomplete="on">
-                <a href="#">短信验证码登录</a>
-                <input type="submit" value="登录" id="login">
+        <div class="content-longin">
+            <div class="content-l">
+                <div><img src="./img/登录二维码.png"></div>
+                <p>若您使用华为手机，请进入“设置”>“华为帐号”扫码登录。</p>
             </div>
-            <div class="content-r-b">
-                <a href="#">注册</a>
-                <a href="#">忘记密码</a>
-                <a href="#">遇到问题</a>
-                <p>
-                    <span><i class="iconfont icon-huaban2"></i></span>
-                    <span><i class="iconfont icon-zhifubao"></i></span>
-                    <span><i class="iconfont icon-wechat-fill"></i></span>
-                   
-                </p>
-            </div>
-        </div>
 
-    </div>
+            <div class="content-z">
+
+            </div>
+
+            <div class="content-r">
+                <div class="content-r-input">
+                    <input type="text" placeholder="手机号/邮箱地址/账户名" id="username" autocomplete="on">
+                    <input type="password" placeholder="密码" id="password" autocomplete="on">
+                    <a href="#">短信验证码登录</a>
+                    <input type="submit" value="登录" id="login">
+                </div>
+                <div class="content-r-b">
+                    <a href="#">注册</a>
+                    <a href="#">忘记密码</a>
+                    <a href="#">遇到问题</a>
+                    <p>
+                        <span><i class="iconfont icon-huaban2"></i></span>
+                        <span><i class="iconfont icon-zhifubao"></i></span>
+                        <span><i class="iconfont icon-wechat-fill"></i></span>
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <footer>
@@ -71,14 +73,14 @@
                 <em>|</em>
                 <span>Cookies</span>
             </div>
-            <p>华为帐号  版权所有 © 2011-2021 </p>
+            <p>华为帐号 版权所有 © 2011-2021 </p>
         </div>
-    </footer>   
+    </footer>
 
     <!--接口 -->
     <script>
-        $(function() {
-            $("#login").click(function() {
+        $(function () {
+            $("#login").click(function () {
                 if ($("#username").val() && $("#password").val() != "") {
                     $.get("http://jx.xuzhixiang.top/ap/api/login.php", {
                         username: $("#username").val(),
@@ -99,7 +101,8 @@
                     alert("用户名或密码不能为空")
                 }
             })
-        }) 
+        })
     </script>
 </body>
+
 </html>

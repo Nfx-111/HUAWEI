@@ -193,12 +193,12 @@ header {
           line-height: 40px; }
   .content .list {
     width: 1200px;
-    height: 248px;
+    height: 220px;
     background-color: #fff;
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
-    padding-top: 10px; }
+    align-items: center; }
     .content .list img {
       width: 100px;
       height: 100px; }
@@ -210,34 +210,84 @@ header {
       justify-content: space-around; }
       .content .list ul .p-price {
         width: 100px;
-        height: 20px; }
-      .content .list ul li > .p-name {
+        height: 20px;
+        color: #ca151e; }
+      .content .list ul .p-name {
         width: 450px;
         height: 85px;
-        background-color: #ccc; }
-      .content .list ul li > .price {
+        background-color: #f8f8f8;
+        line-height: 30px; }
+      .content .list ul .price {
         width: 100px;
         height: 24px; }
-      .content .list ul li > .p-stock {
+      .content .list ul .p-stock {
         width: 100px;
         height: 22px;
         display: flex; }
-        .content .list ul li > .p-stock input {
+        .content .list ul .p-stock input {
           width: 44px;
           height: 20px;
           border: none;
           outline: none;
           border-top: 1px solid #ccc;
-          border-bottom: 1px solid #ccc; }
-        .content .list ul li > .p-stock span {
+          border-bottom: 1px solid #ccc;
+          text-align: center; }
+        .content .list ul .p-stock span {
           width: 20px;
           height: 20px;
           border: 1px solid #ccc;
           text-align: center;
           line-height: 20px; }
-      .content .list ul li > .del {
+          .content .list ul .p-stock span:hover {
+            cursor: pointer; }
+      .content .list ul .del {
         width: 100px;
         height: 20px; }
+        .content .list ul .del:hover {
+          cursor: pointer; }
+  .content .total {
+    width: 1200px;
+    height: 60px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .content .total .opta {
+      width: 135px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-left: 10px; }
+      .content .total .opta span {
+        font-size: 14px;
+        color: #3a3a3a; }
+        .content .total .opta span:hover {
+          cursor: pointer; }
+    .content .total .set {
+      display: flex; }
+      .content .total .set p {
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px; }
+        .content .total .set p span {
+          font-size: 18px;
+          color: #ca151e; }
+      .content .total .set input {
+        width: 180px;
+        height: 60px;
+        line-height: 60px;
+        display: block;
+        background: #ca151e;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        outline: none;
+        border: none; }
+        .content .total .set input:hover {
+          cursor: pointer; }
 
 .fixed-cd {
   width: 80px;

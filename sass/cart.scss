@@ -279,12 +279,12 @@ header {
 
     .list {
         width: 1200px;
-        height: 248px;
+        height: 220px;
         background-color: #fff;
         margin-top: 10px;
         display: flex;
         justify-content: space-between;
-        padding-top: 10px;
+        align-items: center;
 
         img {
             width: 100px;
@@ -302,53 +302,120 @@ header {
             .p-price {
                 width: 100px;
                 height: 20px;
+                color: #ca151e;
+            }
+
+            .p-name {
+                width: 450px;
+                height: 85px;
+                background-color: #f8f8f8;
+                line-height: 30px;
 
             }
 
-            li {
-                // float: left;
-
-                >.p-name {
-                    width: 450px;
-                    height: 85px;
-                    background-color: #ccc;
-                    // border: 1px solid #777;
-                }
-
-                >.price {
-                    width: 100px;
-                    height: 24px;
-                }
-
-                >.p-stock {
-                    width: 100px;
-                    height: 22px;
-                    display: flex;
+            .price {
+                width: 100px;
+                height: 24px;
+            }
 
 
-                    input {
-                        width: 44px;
-                        height: 20px;
-                        border: none;
-                        outline: none;
-                        border-top: 1px solid #ccc;
-                        border-bottom: 1px solid #ccc;
-                    }
-
-                    span {
-                        width: 20px;
-                        height: 20px;
-                        border: 1px solid #ccc;
-                        text-align: center;
-                        line-height: 20px;
-                    }
-                }
+            .p-stock {
+                width: 100px;
+                height: 22px;
+                display: flex;
 
 
-
-                >.del {
-                    width: 100px;
+                input {
+                    width: 44px;
                     height: 20px;
+                    border: none;
+                    outline: none;
+                    border-top: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
+                    text-align: center;
+                }
+
+                span {
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid #ccc;
+                    text-align: center;
+                    line-height: 20px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .del {
+                width: 100px;
+                height: 20px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+
+    .total {
+        width: 1200px;
+        height: 60px;
+        background-color: #fff;
+        margin: 0 auto;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .opta {
+            width: 135px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-left: 10px;
+
+            span {
+                font-size: 14px;
+                color: #3a3a3a;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .set {
+            display: flex;
+
+            p {
+                width: 200px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+
+                span {
+                    font-size: 18px;
+                    color: #ca151e;
+                }
+            }
+
+            input {
+                width: 180px;
+                height: 60px;
+                line-height: 60px;
+                display: block;
+                background: #ca151e;
+                font-size: 18px;
+                color: #fff;
+                text-align: center;
+                outline: none;
+                border: none;
+
+                &:hover {
+                    cursor: pointer;
                 }
             }
         }

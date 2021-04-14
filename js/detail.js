@@ -48,12 +48,12 @@ $("#more-jc").hover(
 					$(".huidingbu").fadeOut();
       }
     })
-
       $(".huidingbu").click(function () {
 			$("body,html").stop().animate({
 				"scrollTop": 0
 			}, 300)			
       });
+
 $(function () {
     let id = location.search.split("=")[1];
     $.get("http://jx.xuzhixiang.top/ap/api/detail.php", {
@@ -80,41 +80,56 @@ $(function () {
 		<!-- 内容 -->
 		<div class="z-detail">
 			<!-- 商品介绍 -->
-			<div class="present">${pData.pdesc}</div>
+			<div class="present"><span>商&nbsp;品</span>&nbsp;&nbsp;${pData.pname}  <br> <span>介&nbsp;绍</span>&nbsp;&nbsp; ${pData.pdesc}</div>
 			<!-- 价格栏 -->
-			<div class="price">${pData.pprice}</div>
+			<div class="price"><span>价&nbsp;格</span>&nbsp;￥${pData.pprice}
+      <p>促销</p> </div>
 			<!-- 服务、ID -->
 			<div class="serve"></div>
 			<!-- id -->
-			<div class="good-id">${pData.pid}</div>
+			<div class="good-id">商品编号   ${pData.pid}</div>
 			<!-- 选项 -->
 			<div class="option"></div>
 
 			<!-- 添加购物车 -->
 			<div class="add-cart">
 				<div class="add-num">
-					<input class="number" type="text" value="${pData.pnum}">
-					<span>+</span>
-					<span>-</span>
+					<input class="number" type="text" value="1">
+					<span class="add-number">+</span>
+					<span class="reduce-number">-</span>
 				</div>
 
 				<div class="cart">
-					<input type="buttom" value="加入购物车" class="add-cart">
+					<input type="buttom" value="加入购物车" class="add">
 					<input type="buttom" value="立即购买" class="buy">
 				</div>
 			</div>
 		</div>
         `;
         $(".content").html(str);
-        $(".add-cart").click(function () {
+        $(".add").click(function () {
             $.get("http://jx.xuzhixiang.top/ap/api/add-product.php", {
                 uid: 4690,
-                pid: 416080,
+                pid: pData.pid,
                 pnum:$(".number").val()
             }).then(res => {
-                console.log(res);
+              console.log(res);
+              location.href=`http://localhost:8080/cart.html?id=${pData.pid}`
                 
             })
         })
+      
+      // 加减
+      $(".add-number").click(function () {
+        $(".number").val(Number($(".number").val()) +1);
+      })
+
+      $(".reduce-number").click(function () {
+        $(".number").val(Number($(".number").val()) -1);
+        if ($(".number").val() <= 1) {
+          $(".number").val("1")
+        }
+      })
+
     })
     })

@@ -145,7 +145,7 @@
 			<!-- 商品介绍 -->
 			<div class="present"></div>
 			<!-- 价格栏 -->
-			<div class="price"> </div>
+			<div class="price"><span>价&nbsp;格</span> </div>
 			<!-- 服务、ID -->
 			<div class="serve"> </div>
 			<!-- id -->
@@ -157,9 +157,9 @@
 			<div class="add-cart">
 
 				<div class="add-num">
-					<input type="text">
-					<span>+</span>
-					<span>-</span>
+					<input type="text" class="number">
+					<span class="minus">+</span>
+					<span class="plus">-</span>
 				</div>
 
 				<div class="cart">
@@ -308,69 +308,28 @@
 	</footer>
 	<script src="js/detail.js"></script>
 	<script>
-		// 放大镜
-		console.log("aa")
+		let oMinus = document.querySelector(".minus");
+		let oPlus = document.querySelector(".plus");
+		let oNum = document.querySelector(".number");
+		let oBtn = document.querySelector(".add-cart");
 
-		function Warp() {
-			this.warp = document.querySelector(".z-img");
-			console.log(this.warp)
-
-			this.midimg = document.querySelector(".midimg");
-			this.mImg = this.midimg.children[0];
-
-			this.zoom = document.querySelector(".zoom");
-
-			this.bigimg = document.querySelector(".bigimg");
-			this.bImg = this.bigimg.children[0];
-
-			this.samllimg = document.querySelector(".samllimg");
-			this.sImg = this.samllimg.children;
-			// 鼠标移入显示
-			this.midimg.onmouseover = () => {
-				this.zoom.style.display = "block";
-				this.bigimg.style.display = "block";
+		oMinus.onclick = function () {
+			if (oNum.value <= 1) {
+				oNum.value = 1;
+			} else {
+				oNum.value--;
 			}
-			// 鼠标移出消失
-			this.midimg.onmouseout = () => {
-				this.zoom.style.display = "none";
-				this.bigimg.style.display = "none";
-			}
+		}
+		oPlus.onclick = function () {
 
-			this.midimg.onmousemove = (e) => {
-				let evt = e || event;
-
-				let wl = this.midimg.offsetWidth - this.zoom.offsetWidth;
-				let wh = this.midimg.offsetHeight - this.zoom.offsetHeight;
-
-				// 鼠标位置 在放大镜zoom框中间
-				let l = evt.pageX - this.warp.offsetLeft - this.zoom.offsetWidth / 2;
-				let t = evt.pageY - this.warp.offsetTop - this.zoom.offsetHeight / 2;
-
-				// 判断zoom框移动位置
-				l = l <= 0 ? 0 : l >= wl ? wl : l;
-				t = t <= 0 ? 0 : t >= wh ? wh : t;
-
-				// zoom框的top left跟着鼠标移动
-				this.zoom.style.top = t + "px";
-				this.zoom.style.left = l + "px";
-
-				// 取得中间图片宽与放大框移动比例 * 放大图片的宽
-				this.bImg.style.left = -this.zoom.offsetLeft / this.midimg.offsetWidth * this.bImg
-					.offsetWidth + "px";
-				this.bImg.style.top = -this.zoom.offsetTop / this.midimg.offsetHeight * this.bImg
-					.offsetHeight + "px";
-			}
-
-			for (let i = 0; i < this.sImg.length; i++) {
-				this.sImg[i].onclick = () => {
-					this.bImg.src = this.mImg.src = this.sImg[i].src;
-
-				}
-
-			}
+			oNum.value++;
 
 		}
-		new Warp();
+		oNum.onchange = function () {
+			if (oNum.value <= 1) {
+				oNum.value = 1;
+			}
+		}
 	</script>
 
 

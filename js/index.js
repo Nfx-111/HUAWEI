@@ -25,7 +25,15 @@ function indexjs() {
     function(){
       $("#nav-ul").css("display","none")
     })
-
+// 二级导航
+  $(".nav>ul li").hover(function () {
+    $(".nav-a").css("display","block")
+  }, function () {
+    $(".nav-a").css("display","none")
+  })
+  
+  
+  
 // logo-input
     $("#logo-input").focus(function(){
       $("#logo-a").css("display","none");

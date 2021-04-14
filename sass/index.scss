@@ -10,6 +10,10 @@ a {
     text-decoration: none;
 }
 
+i {
+    font-style: normal;
+}
+
 header {
     height: 37px;
     background-color: #2e2828;
@@ -283,39 +287,74 @@ header {
 .nav {
     width: 200px;
     height: 440px;
-    background-color: #fff;
+    background-color: #f9f3f5;
     margin: 0 auto;
     border-radius: 10px;
     position: absolute;
     top: 15px;
     left: 50px;
     z-index: 100;
-    overflow: hidden;
 
     ul {
         width: 200px;
 
 
         li {
-            background-color: #fff;
+            background-color: #f9f3f5;
             padding: 10px 10px;
             font-size: 14px;
             color: #8d8a91;
 
-
+            &:first-child {
+                border-radius: 10px 0 0 0;
+            }
 
             &:hover {
-                background-color: #f3f3f3;
+                background-color: #fff;
             }
 
             span {
-                // display: inline-block;
                 margin-right: 10px;
                 float: right;
 
 
             }
         }
+    }
+
+    .nav-a {
+        min-width: 300px;
+        min-height: 420px;
+        border-radius: 0 10px 10px 0;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        right: -335px;
+        padding: 10px 20px;
+        display: none;
+
+        li {
+            width: 260px;
+            height: 60px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+
+            i {
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                margin-right: 10px;
+
+                img {
+                    width: 100%;
+                }
+
+            }
+        }
+
     }
 }
 
@@ -848,6 +887,7 @@ h1 {
     width: $bg-wid;
     min-height: 100px;
     margin: 0 auto;
+    margin-bottom: 90px;
 
     .apparel-t {
         display: flex;

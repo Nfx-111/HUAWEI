@@ -537,6 +537,9 @@ li {
 a {
   text-decoration: none; }
 
+i {
+  font-style: normal; }
+
 header {
   height: 37px;
   background-color: #2e2828; }
@@ -725,26 +728,52 @@ header {
 .nav {
   width: 200px;
   height: 440px;
-  background-color: #fff;
+  background-color: #f9f3f5;
   margin: 0 auto;
   border-radius: 10px;
   position: absolute;
   top: 15px;
   left: 50px;
-  z-index: 100;
-  overflow: hidden; }
+  z-index: 100; }
   .nav ul {
     width: 200px; }
     .nav ul li {
-      background-color: #fff;
+      background-color: #f9f3f5;
       padding: 10px 10px;
       font-size: 14px;
       color: #8d8a91; }
+      .nav ul li:first-child {
+        border-radius: 10px 0 0 0; }
       .nav ul li:hover {
-        background-color: #f3f3f3; }
+        background-color: #fff; }
       .nav ul li span {
         margin-right: 10px;
         float: right; }
+  .nav .nav-a {
+    min-width: 300px;
+    min-height: 420px;
+    border-radius: 0 10px 10px 0;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: -335px;
+    padding: 10px 20px;
+    display: none; }
+    .nav .nav-a li {
+      width: 260px;
+      height: 60px;
+      background-color: #fff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center; }
+      .nav .nav-a li i {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        margin-right: 10px; }
+        .nav .nav-a li i img {
+          width: 100%; }
 
 .login-lan {
   width: 1200px;
@@ -1110,7 +1139,8 @@ h1 {
 .apparel {
   width: 1212px;
   min-height: 100px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: 90px; }
   .apparel .apparel-t {
     display: flex; }
     .apparel .apparel-t .t-l {

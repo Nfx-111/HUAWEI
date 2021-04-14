@@ -240,6 +240,9 @@ header {
       position: absolute;
       bottom: -90px;
       left: 0; }
+      .content .z-img .samllimg img {
+        width: 60px;
+        height: 60px; }
   .content .z-detail {
     width: 730px;
     height: 650px; }
@@ -247,12 +250,25 @@ header {
       width: 700px;
       height: 92px;
       border: 1px solid #777;
-      margin: 10px auto 0; }
+      margin: 10px auto 0;
+      font-size: 22px; }
+      .content .z-detail .present span {
+        font-size: 16px;
+        color: #666; }
     .content .z-detail .price {
       width: 700px;
       height: 175px;
       background-color: #ccc;
-      margin: 10px auto; }
+      margin: 10px auto;
+      font-size: 18px;
+      color: #a90e20; }
+      .content .z-detail .price span {
+        font-size: 16px;
+        color: #000; }
+      .content .z-detail .price p {
+        font-size: 16px;
+        color: #000;
+        margin-top: 20px; }
     .content .z-detail .serve {
       width: 700px;
       height: 55px;
@@ -262,7 +278,8 @@ header {
       width: 700px;
       height: 18px;
       border: 1px solid #777;
-      margin: 0 auto; }
+      margin: 0 auto;
+      font-size: 14px; }
     .content .z-detail .option {
       width: 700px;
       height: 150px;

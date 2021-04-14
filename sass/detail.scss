@@ -345,6 +345,11 @@ header {
             position: absolute;
             bottom: -90px;
             left: 0;
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
         }
     }
 
@@ -359,6 +364,12 @@ header {
             height: 92px;
             border: 1px solid #777;
             margin: 10px auto 0;
+            font-size: 22px;
+
+            span {
+                font-size: 16px;
+                color: #666;
+            }
         }
 
         .price {
@@ -366,6 +377,19 @@ header {
             height: 175px;
             background-color: #ccc;
             margin: 10px auto;
+            font-size: 18px;
+            color: #a90e20;
+
+            span {
+                font-size: 16px;
+                color: #000;
+            }
+
+            p {
+                font-size: 16px;
+                color: #000;
+                margin-top: 20px;
+            }
         }
 
         .serve {
@@ -380,6 +404,7 @@ header {
             height: 18px;
             border: 1px solid #777;
             margin: 0 auto;
+            font-size: 14px;
         }
 
         .option {
