@@ -8,6 +8,10 @@ li {
 a {
   text-decoration: none; }
 
+em,
+i {
+  font-style: normal; }
+
 header {
   height: 37px; }
   header #head {
@@ -255,7 +259,7 @@ header {
     justify-content: space-between;
     align-items: center; }
     .content .total .opta {
-      width: 135px;
+      width: 100px;
       display: flex;
       justify-content: space-around;
       align-items: center;

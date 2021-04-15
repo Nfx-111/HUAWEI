@@ -630,14 +630,14 @@ header {
           top: 25px;
           right: 0;
           z-index: 2;
-          display: flex;
           padding: 20px;
           border-radius: 10px;
+          display: flex;
           display: none; }
           header #head #right li div p {
             width: 50px;
             text-align: center;
-            margin: 20px 46px 0 49px;
+            margin: 20px 46px 0 10px;
             color: #777;
             display: flex;
             flex-direction: column; }
@@ -650,12 +650,14 @@ header {
           header #head #right li div ol {
             padding: 0 10px; }
             header #head #right li div ol h2 {
-              color: #000; }
+              color: #000;
+              margin-top: 10px; }
             header #head #right li div ol li {
               display: inline-block;
               border: none;
               color: #777;
-              margin-right: 10px; }
+              margin-right: 10px;
+              line-height: 30px; }
               header #head #right li div ol li:hover {
                 color: #a90e20; }
 

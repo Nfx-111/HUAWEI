@@ -19,7 +19,7 @@ $(function () {
                             <input type="text" value="${pData[i].pnum}" class="number" uid="${pData[i].uid}" pid="${pData[i].pid}">
                             <span class="plus">+</span>
                         </li>
-                        <li class="p-price"><i>￥</i><em>${pData[i].pprice*pData[i].pnum}</em></li>
+                        <li class="p-price"><i></i><em>${pData[i].pprice*pData[i].pnum}</em></li>
                         <li class="del">删除</li>
                     </ul>
                 </div>
@@ -123,22 +123,40 @@ $(function () {
         let aList = document.querySelectorAll(".list");
 
 
-        oCheckAll[0].onclick = () => {
-     
-            for (let i = 0; i < aCk.length; i++) {
-               aCk[i].checked = oCheckAll[0].checked;
+        for (let i = 0; i < oCheckAll.length;i++){
+        oCheckAll[i].onclick = () => {
+
+            for (let j = 0; j < aCk.length; j++) {
+               aCk[j].checked = oCheckAll[i].checked;
             }
+            let count=0
+            let sum = 0;
+            for (let j = 0; j < aCk.length; j++) {
+                if (aCk[j].checked) { 
+                    count++;
+                    sum += Number($(".ck").eq(j).siblings().find($(".p-price")).text());
+                }
+                $(".all-price").text(sum);
+            };
+      
+            
         }
+        }
+        
+
     
         for (let i = 0; i < aList.length; i++) {
            aCk[i].onclick = () => {
-                let count = 0; //计数,每次点击时，重新开始计算
+               let count = 0;
+               let sum = 0;
                 for (let j = 0; j < aCk.length; j++) {
                     if (aCk[j].checked) { 
                         count++;
+                        sum += Number($(".ck").eq(j).siblings().find($(".p-price")).text());
                     }
+                     $(".all-price").text(sum);
                 };
-    
+             
                 if (count === aCk.length) { 
                     oCheckAll[0].checked = true;
                 } else {
@@ -150,11 +168,13 @@ $(function () {
 
       
 
-        if ($(".ck").checked = true) {
-            $(".all-price").text($(".p-price").text())
-     }
-        
-
+            
+    /*     if ($(".ck").checked = true) {
+            $(".all-price").text += $(".p-price").text();
+            }  */
+          
+   
+    
 
 
 

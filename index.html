@@ -97,7 +97,7 @@
 
         <li>手机版 <i class="iconfont icon-icon"></i></li>
 
-        <li> <a href="cart.html"><i class="iconfont icon-gouwuche"></i>购物车</a></li>
+        <li id="cart"> <a href="cart.html"><i class="iconfont icon-gouwuche"></i>购物车</a></li>
 
       </nav>
     </div>
@@ -163,7 +163,7 @@
         <li>美食酒饮 <span>&gt;</span></li>
         <li>增值服务企业商用 <span>&gt;</span></li>
       </ul>
-      <div class="nav-a">
+      <div class="nav-a" id="nav-a">
         <ul>
           <li><i><img src="https://res.vmallres.com/pimages//pages/frontCategory/14651510730611515641.png"></i>HUAWEI
             Mate系列</li>
@@ -171,6 +171,16 @@
             P系列</li>
           <li><i><img src="https://res.vmallres.com/pimages//pages/frontCategory/JtWD6wvaxu0qmHbN2tbO.png"></i>HUAWEI
             nova系列</li>
+          <li><i></i>查看全部</li>
+
+        </ul>
+      </div>
+
+      <div class="nav-a" id="nav-b">
+        <ul>
+          <li><i><img src="https://res.vmallres.com/pimages//pages/frontCategory/62195671320617659126.png"></i>无线耳机</li>
+          <li><i><img src="https://res.vmallres.com/pimages//pages/frontCategory/8GZSNEOIyFTlKHGXJIUp.jpg"></i>有线耳机</li>
+          <li><i><img src="https://res.vmallres.com/pimages//pages/frontCategory/65908671320617680956.png"></i>蓝牙耳机</li>
           <li><i></i>查看全部</li>
 
         </ul>
@@ -1049,13 +1059,23 @@
   <!-- 登录过 -->
   <script>
     let username = location.search.split("=")[1]
-    $("#login").html("<i>" + username + "</i>")
-    $("#reji").html("<a href='index.html'>退出</a>")
+    $("#login").html("<i>" + username + "</i>");
+    $("#reji").html("<a href='index.html'>退出</a>");
+    // $("#login-a").html("<a href='#'>" + username + "</a>")
+    /*     $("#login-a").html("<div class='head-z'>你好！请
+            <a href='longin.html' id='login-a'>登录/</a>
+            <a href='reji.html'>注册</a> </div>") */
+
+
 
     if (username === undefined) {
       $("#login").html("<a href='longin.html' id='login'>请登录</a>")
       $("#reji").html("<a href='reji.html' id='reji'>注册</a>")
-
+      // $("#login-a").html("<a href='longin.html' id='login-a'>登录/</a>")
+      $("#cart").html("<li id='cart'> <i class='iconfont icon-gouwuche'></i>购物车</li>")
+      $("#cart").mousedown(function () {
+        alert("请先登录")
+      })
     }
   </script>
 

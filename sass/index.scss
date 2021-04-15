@@ -129,19 +129,20 @@ header {
                     min-width: 800px;
                     min-height: 100px;
                     background-color: #fff;
+                    // background-color: #a20434;
                     position: absolute;
                     top: 25px;
                     right: 0;
                     z-index: 2;
-                    display: flex;
                     padding: 20px;
                     border-radius: 10px;
+                    display: flex;
                     display: none;
 
                     p {
                         width: 50px;
                         text-align: center;
-                        margin: 20px 46px 0 49px;
+                        margin: 20px 46px 0 10px;
                         color: #777;
                         display: flex;
                         flex-direction: column;
@@ -158,10 +159,12 @@ header {
                     }
 
                     ol {
+
                         padding: 0 10px;
 
                         h2 {
                             color: #000;
+                            margin-top: 10px;
                         }
 
                         li {
@@ -169,6 +172,7 @@ header {
                             border: none;
                             color: #777;
                             margin-right: 10px;
+                            line-height: 30px;
 
                             &:hover {
                                 color: #a90e20;

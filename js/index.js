@@ -26,10 +26,16 @@ function indexjs() {
       $("#nav-ul").css("display","none")
     })
 // 二级导航
-  $(".nav>ul li").hover(function () {
-    $(".nav-a").css("display","block")
+  $(".nav>ul li:even").hover(function () {
+    $("#nav-a").css("display","block")
   }, function () {
-    $(".nav-a").css("display","none")
+    $("#nav-a").css("display","none")
+  })
+
+  $(".nav>ul li:odd").hover(function () {
+    $("#nav-b").css("display","block")
+  }, function () {
+    $("#nav-b").css("display","none")
   })
   
   
