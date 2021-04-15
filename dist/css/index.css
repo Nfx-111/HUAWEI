@@ -989,18 +989,18 @@ h1 {
         .hot .hot-right dl dd span {
           font-size: 10px;
           color: #a20434; }
-      .hot .hot-right dl .new-p {
-        width: 65px;
-        height: 20px;
-        font-size: 12px;
-        color: #fff;
-        text-align: center;
-        line-height: 20px;
-        background-color: #f56d71;
-        border-radius: 0 0 5px 5px;
-        position: absolute;
-        top: 0;
-        left: 40%; }
+    .hot .hot-right .new-p {
+      width: 65px;
+      height: 20px;
+      font-size: 12px;
+      color: #fff;
+      text-align: center;
+      line-height: 20px;
+      background-color: #f56d71;
+      border-radius: 0 0 5px 5px;
+      position: absolute;
+      top: 0;
+      left: 40%; }
 
 .compe {
   width: 1212px;
@@ -1092,6 +1092,9 @@ h1 {
     align-items: center; }
     .h2-bt ul li {
       margin: 0 15px; }
+      .h2-bt ul li:hover {
+        color: #a90e20;
+        cursor: pointer; }
 
 .phone {
   width: 1212px;

@@ -80,7 +80,7 @@ function indexjs() {
         uid: 0011122
     }).then(res => {
         oUl = res.data
-        console.log(oUl)
+        // console.log(oUl)
         for (let id in oUl) {
             str += `
       <dl data-id=${id}>
@@ -94,11 +94,10 @@ function indexjs() {
        </a>
        </dl>
        `;
-            console.log(id)
         }
         list.innerHTML = str;
     })
-    console.log(list)
+
     
   
   

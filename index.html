@@ -271,7 +271,7 @@
 
     <div class="hot-right">
       <!-- <div class="hot-right-t">  -->
-
+      <!-- 
       <dl>
 
         <dt><img src="./img/FreeBuds 4i.png" alt=""></dt>
@@ -282,53 +282,7 @@
         </dd>
         <div class="new-p">新品上市</div>
 
-      </dl>
-
-      <dl>
-
-        <dt><img src="./img/下载 (1).png" alt=""></dt>
-        <dd>
-          <h6 class="good">FreeBuds 4i</h6>
-          <p class="present">享3期免息</p>
-          <span class="price">¥499</span>
-        </dd>
-        <div class="new-p">新品上市</div>
-
-      </dl>
-
-      <dl>
-
-        <dt><img src="./img/下载.png" alt=""></dt>
-        <dd>
-          <h6 class="good">HUAWEI Mate 40E 5G</h6>
-          <p class="present">Mate 40系类新品上市</p>
-          <span class="price">¥4599</span>
-        </dd>
-
-      </dl>
-
-      <dl>
-
-        <dt><img src="./img/下载3.png" alt=""></dt>
-        <dd>
-          <h6 class="good">清易集尘扫拖机器人</h6>
-          <p class="present">限时直降600</p>
-          <span class="price">¥2699</span>
-        </dd>
-
-      </dl>
-
-      <dl>
-
-        <dt><img src="./img/下载.png" alt=""></dt>
-        <dd>
-          <h6 class="good">nova 8 Pro</h6>
-          <p class="present">限时开售</p>
-          <span class="price">¥3999</span>
-        </dd>
-        <div class="new-p">新品上市</div>
-
-      </dl>
+      </dl> -->
 
       <dl>
 
@@ -339,29 +293,9 @@
           <span class="price">¥499</span>
         </dd>
 
-      </dl>
-
-      <dl>
-
-        <dt><img src="./img/下载3.png" alt=""></dt>
-        <dd>
-          <h6 class="good">FreeBuds 4i</h6>
-          <p class="present">享3期免息</p>
-          <span class="price">¥499</span>
-        </dd>
-        <div class="new-p">新品上市</div>
 
       </dl>
-
-      <dl>
-
-        <dt><img src="./img/FreeBuds 4i.png" alt=""></dt>
-        <dd>
-          <h6 class="good">FreeBuds 4i</h6>
-          <p class="present">享3期免息</p>
-          <span class="price">¥499</span>
-        </dd>
-      </dl>
+      <div class="new-p">新品上市</div>
     </div>
 
     <!-- </div> -->
@@ -918,7 +852,7 @@
   <!-- 定位菜单 -->
   <div class="fixed-cd">
     <div><i class="iconfont icon-zaixiankefu"></i> <a href="#">在线客服</a></div>
-    <div><i class="iconfont icon-gouwuche"></i> <a href="#">购物车</a></div>
+    <div class="cart-c"><i class="iconfont icon-gouwuche"></i> <a href="#">购物车</a></div>
     <div><i class="fuwu"></i> <a href="#">自助服务</a></div>
     <div class="huidingbu"><i class="iconfont icon-huidingbu"></i> <a href="#">回到顶部</a></div>
 
@@ -1049,8 +983,6 @@
     </div>
   </footer>
 
-
-
   <!-- indexjs -->
   <script>
     indexjs();
@@ -1061,27 +993,19 @@
     let username = location.search.split("=")[1]
     $("#login").html("<i>" + username + "</i>");
     $("#reji").html("<a href='index.html'>退出</a>");
-    // $("#login-a").html("<a href='#'>" + username + "</a>")
-    /*     $("#login-a").html("<div class='head-z'>你好！请
-            <a href='longin.html' id='login-a'>登录/</a>
-            <a href='reji.html'>注册</a> </div>") */
-
+    $(".cart-c").html("<i class='iconfont  icon-gouwuche'></i><a href='cart.html'>购物车</a>");
 
 
     if (username === undefined) {
       $("#login").html("<a href='longin.html' id='login'>请登录</a>")
       $("#reji").html("<a href='reji.html' id='reji'>注册</a>")
-      // $("#login-a").html("<a href='longin.html' id='login-a'>登录/</a>")
+
       $("#cart").html("<li id='cart'> <i class='iconfont icon-gouwuche'></i>购物车</li>")
       $("#cart").mousedown(function () {
         alert("请先登录")
       })
     }
   </script>
-
-
-
-
 
 
   <!-- 轮播js -->

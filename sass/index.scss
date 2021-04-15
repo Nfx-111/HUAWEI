@@ -679,19 +679,21 @@ h1 {
                 }
             }
 
-            .new-p {
-                width: 65px;
-                height: 20px;
-                font-size: 12px;
-                color: #fff;
-                text-align: center;
-                line-height: 20px;
-                background-color: #f56d71;
-                border-radius: 0 0 5px 5px;
-                position: absolute;
-                top: 0;
-                left: 40%;
-            }
+
+        }
+
+        .new-p {
+            width: 65px;
+            height: 20px;
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            background-color: #f56d71;
+            border-radius: 0 0 5px 5px;
+            position: absolute;
+            top: 0;
+            left: 40%;
         }
     }
 }
@@ -813,6 +815,11 @@ h1 {
 
         li {
             margin: 0 15px;
+
+            &:hover {
+                color: #a90e20;
+                cursor: pointer;
+            }
         }
     }
 }

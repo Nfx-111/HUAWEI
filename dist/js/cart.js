@@ -26,11 +26,7 @@ $(function () {
                     `;
         }
         $(".cartlist").html(str);
-/* 
-    for (let j = 0; j < pData.length; j++){
-            allPrice = allPrice + Number($(".p-price").eq(j).find("em").text());
-        }
-        $(".all-price").text(allPrice);  */
+
 
 // 减
         $(".minus").click(function () {
@@ -53,6 +49,16 @@ $(function () {
                 pnum:number
             }, res => {
                 console.log(res);
+                let count = 0;
+            let sum = 0;
+            for (let j = 0; j < aCk.length; j++) {
+                if (aCk[j].checked) { 
+                    count++;
+                    sum += Number($(".ck").eq(j).siblings().find($(".p-price")).text());
+                }
+                $(".all-price").text(sum);
+            };
+      
             })
 
         })
@@ -75,6 +81,16 @@ $(function () {
                 pnum: number
             }, res => {
                 console.log(res);
+                let count = 0;
+            let sum = 0;
+            for (let j = 0; j < aCk.length; j++) {
+                if (aCk[j].checked) { 
+                    count++;
+                    sum += Number($(".ck").eq(j).siblings().find($(".p-price")).text());
+                }
+                $(".all-price").text(sum);
+            };
+      
             })
         });
 
@@ -94,11 +110,18 @@ $(function () {
                 pnum: number
             }, res => {
                 console.log(res);
+                let count = 0;
+            let sum = 0;
+            for (let j = 0; j < aCk.length; j++) {
+                if (aCk[j].checked) { 
+                    count++;
+                    sum += Number($(".ck").eq(j).siblings().find($(".p-price")).text());
+                }
+                $(".all-price").text(sum);
+            };
+      
             })
         })
-
-
-
 
 //    删
         $(".del").click(function () {
@@ -112,12 +135,20 @@ $(function () {
                 pid:pid
             }, res =>{
                 console.log(res)
+
+                let count = 0;
+            let sum = 0;
+            for (let j = 0; j < aCk.length; j++) {
+                if (aCk[j].checked) { 
+                    count++;
+                    sum += Number($(".ck").eq(j).siblings().find($(".p-price")).text());
+                }
+                $(".all-price").text(sum);
+            };
+      
             })
         })
         
-
-
-
         let oCheckAll = document.querySelectorAll(".checkAll");
         let aCk = document.querySelectorAll(".ck");
         let aList = document.querySelectorAll(".list");
@@ -125,11 +156,13 @@ $(function () {
 
         for (let i = 0; i < oCheckAll.length;i++){
         oCheckAll[i].onclick = () => {
+            oCheckAll[0].checked = oCheckAll[i].checked;
+            oCheckAll[1].checked = oCheckAll[i].checked;
 
             for (let j = 0; j < aCk.length; j++) {
                aCk[j].checked = oCheckAll[i].checked;
             }
-            let count=0
+            let count = 0;
             let sum = 0;
             for (let j = 0; j < aCk.length; j++) {
                 if (aCk[j].checked) { 
@@ -142,9 +175,7 @@ $(function () {
             
         }
         }
-        
-
-    
+          
         for (let i = 0; i < aList.length; i++) {
            aCk[i].onclick = () => {
                let count = 0;
@@ -159,28 +190,17 @@ $(function () {
              
                 if (count === aCk.length) { 
                     oCheckAll[0].checked = true;
+                    oCheckAll[1].checked = true;
                 } else {
                     oCheckAll[0].checked = false;
+                    oCheckAll[1].checked = false;
+
                 }
     
             }
         }
 
-      
-
-            
-    /*     if ($(".ck").checked = true) {
-            $(".all-price").text += $(".p-price").text();
-            }  */
-          
-   
-    
-
-
 
     })
-
-
-
 
 })
