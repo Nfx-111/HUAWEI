@@ -5,7 +5,6 @@ $(function () {
         // console.log(res.data[0])
         let pData = res.data;
         var str = "";
-        let allPrice = 0;
         for (let i = 0; i < pData.length; i++){
             str += `
                 <div class="list">
